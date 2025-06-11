@@ -1,55 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Fatma Xhafa - Project Manager</title>
-  <link rel="stylesheet" href="assets/css/main.css" />
+  <style>
+    /* Reset & base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #FCF6F5;
+      color: #330000;
+      line-height: 1.6;
+    }
+    a {
+      color: #990011;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #66000a;
+    }
+    h1, h2, h3, h4 {
+      margin-top: 0;
+      color: #990011;
+      font-weight: 700;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.25rem;
+    }
+    h2 {
+      border-bottom: 3px solid #990011;
+      padding-bottom: 0.3rem;
+      margin-bottom: 1rem;
+    }
+    h3 {
+      font-size: 1.4rem;
+      margin-bottom: 0.2rem;
+    }
+    small {
+      font-weight: 400;
+      font-style: italic;
+      color: #661111;
+    }
+    p {
+      margin-top: 0.25rem;
+      margin-bottom: 1rem;
+    }
+    .container {
+      max-width: 800px;
+      margin: 2rem auto 4rem;
+      padding: 0 1rem;
+    }
+    /* Header */
+    header#main-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    header#main-header p {
+      font-weight: 600;
+      font-size: 1.2rem;
+      color: #66000a;
+    }
+    /* Sections */
+    section {
+      margin-bottom: 3rem;
+    }
+    /* Footer */
+    footer {
+      background: #990011;
+      color: #FCF6F5;
+      padding: 2rem 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+    /* Form */
+    form {
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      flex: 1 1 48%;
+      padding: 0.6rem;
+      border: 1.5px solid #990011;
+      border-radius: 4px;
+      font-size: 1rem;
+      color: #330000;
+      background: #fff;
+      resize: vertical;
+      transition: border-color 0.3s ease;
+    }
+    textarea {
+      flex-basis: 100%;
+      min-height: 100px;
+    }
+    input:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #66000a;
+    }
+    button {
+      background: #990011;
+      color: #FCF6F5;
+      border: none;
+      padding: 0.8rem 2rem;
+      font-size: 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      flex-basis: 100%;
+      max-width: 200px;
+      margin: 0 auto;
+      display: block;
+    }
+    button:hover {
+      background: #66000a;
+    }
+    /* Social */
+    .social {
+      margin-top: 1rem;
+    }
+    .social a {
+      color: #FCF6F5;
+      font-weight: 700;
+      background: #66000a;
+      padding: 0.4rem 0.8rem;
+      border-radius: 3px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+    .social a:hover {
+      background: #330005;
+    }
+    /* Responsive */
+    @media (max-width: 600px) {
+      input[type="text"], input[type="email"] {
+        flex-basis: 100%;
+      }
+    }
+  </style>
 </head>
-<body class="homepage is-preload">
-  <div id="page-wrapper">
+<body>
 
-    <!-- Header -->
-    <section id="header">
-      <div class="container">
-        <h1 id="logo"><a href="index.html">Fatma Xhafa</a></h1>
-        <p>Project Manager</p>
-        <nav id="nav">
-          <ul>
-            <li><a class="icon solid fa-home" href="index.html"><span>Introduction</span></a></li>
-            <!-- You can add menu items here -->
-          </ul>
-        </nav>
-      </div>
-    </section>
+  <div class="container">
+    <header id="main-header">
+      <h1>Fatma Xhafa</h1>
+      <p>Project Manager</p>
+    </header>
 
-    <!-- CV Section -->
-    <section id="cv" style="max-width: 800px; margin: 40px auto; font-family: Arial, sans-serif; line-height: 1.5; color: #333;">
-      <h2 style="border-bottom: 2px solid #444; padding-bottom: 5px;">Education</h2>
-
-      <div style="margin-bottom: 20px;">
+    <section id="education">
+      <h2>Education</h2>
+      <div>
         <h3>American University in Bulgaria</h3>
-        <p><em>2017 - 2021</em></p>
+        <p><small>2017 - 2021</small></p>
         <p>Bachelor of Arts - Computer Science and Business Administration</p>
         <p><strong>CGPA:</strong> 3.8/4.0, Magna Cum Laude</p>
       </div>
 
-      <div style="margin-bottom: 40px;">
+      <div>
         <h3>Polytechnic University of Valencia (Erasmus+ Exchange)</h3>
-        <p><em>January 2019 - June 2019</em></p>
+        <p><small>January 2019 - June 2019</small></p>
         <p>Computer Science and Business Administration</p>
       </div>
+    </section>
 
-      <h2 style="border-bottom: 2px solid #444; padding-bottom: 5px;">Professional Experience</h2>
-
-      <div style="margin-bottom: 30px;">
+    <section id="experience">
+      <h2>Professional Experience</h2>
+      <div>
         <h3>ApexGMAT</h3>
-        <h4 style="margin-top: 10px;">Director of Operations <small style="font-weight: normal; font-style: italic;">March 2023 - present</small></h4>
-        <h4 style="margin-top: 20px;">Engagement Manager <small style="font-weight: normal; font-style: italic;">September 2020 – February 2023</small></h4>
-        <h4 style="margin-top: 20px;">Marketing and Communications Intern <small style="font-weight: normal; font-style: italic;">March 2020 – August 2020</small></h4>
-      </div>
 
-      <h2 style="border-bottom: 2px solid #444; padding-bottom: 5px;">Additional Information</h2>
+        <h4>Director of Operations <small>March 2023 - Present</small></h4>
+        <h4>Engagement Manager <small>September 2020 – February 2023</small></h4>
+        <h4>Marketing and Communications Intern <small>March 2020 – August 2020</small></h4>
+      </div>
+    </section>
+
+    <section id="additional-info">
+      <h2>Additional Information</h2>
       <p><strong>Tools & Platforms:</strong> Google Workspace (Docs, Sheets, Slides, Drive, Analytics) · Zapier · Capsule CRM · Stripe · Square · Calendly · Canva · Asana · Notion · Jira · Confluence · Miro · WordPress · Wix · Squarespace</p>
 
       <p><strong>Project & Operations Skills:</strong> Process Automation · CRM & Pipeline Management · Invoicing & Billing Systems · Agile Collaboration Tools · Cross-functional Coordination</p>
@@ -59,77 +195,23 @@
       <p><strong>Languages:</strong> English (Bilingual) · Albanian (Native) · Italian (Intermediate)</p>
     </section>
 
-    <!-- Footer -->
-    <section id="footer">
-      <div class="container">
-        <header>
-          <h2>Questions or comments? <strong>Get in touch:</strong></h2>
-        </header>
-        <div class="row">
-          <div class="col-6 col-12-medium">
-            <section>
-              <form method="post" action="#">
-                <div class="row gtr-50">
-                  <div class="col-6 col-12-small">
-                    <input name="name" placeholder="Name" type="text" />
-                  </div>
-                  <div class="col-6 col-12-small">
-                    <input name="email" placeholder="Email" type="text" />
-                  </div>
-                  <div class="col-12">
-                    <textarea name="message" placeholder="Message"></textarea>
-                  </div>
-                  <div class="col-12">
-                    <button type="submit" class="button icon solid fa-envelope">Send Message</button>
-                  </div>
-                </div>
-              </form>
-            </section>
-          </div>
-          <div class="col-6 col-12-medium">
-            <section>
-              <p>Erat lorem ipsum veroeros consequat magna tempus lorem ipsum consequat Phaselamet mollis tortor congue. Sed quis mauris sit amet magna accumsan tristique. Curabitur leo nibh, rutrum eu malesuada.</p>
-              <div class="row">
-                <div class="col-6 col-12-small">
-                  <ul class="icons">
-                    <li class="icon solid fa-home">
-                      1234 Somewhere Road<br />
-                      Nashville, TN 00000<br />
-                      USA
-                    </li>
-                    <li class="icon solid fa-phone">(000) 000-0000</li>
-                    <li class="icon solid fa-envelope"><a href="mailto:info@untitled.tld">info@untitled.tld</a></li>
-                  </ul>
-                </div>
-                <div class="col-6 col-12-small">
-                  <ul class="icons">
-                    <li class="icon brands fa-twitter"><a href="#">@untitled</a></li>
-                    <li class="icon brands fa-instagram"><a href="#">instagram.com/untitled</a></li>
-                    <li class="icon brands fa-dribbble"><a href="#">dribbble.com/untitled</a></li>
-                    <li class="icon brands fa-facebook-f"><a href="#">facebook.com/untitled</a></li>
-                  </ul>
-                </div>
-              </div>
-            </section>
-          </div>
-        </div>
-      </div>
-      <div id="copyright" class="container">
-        <ul class="links">
-          <li>&copy; Untitled. All rights reserved.</li>
-          <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-        </ul>
+    <section id="contact">
+      <h2>Get in Touch</h2>
+      <form id="contact-form" method="post" action="mailto:fatmaxhafa@gmail.com" enctype="text/plain">
+        <input type="text" name="name" placeholder="Name" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <textarea name="message" placeholder="Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <div class="social">
+        <a href="https://www.linkedin.com/in/fatmaxhafa" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       </div>
     </section>
-
   </div>
 
-  <!-- Scripts -->
-  <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/jquery.dropotron.min.js"></script>
-  <script src="assets/js/browser.min.js"></script>
-  <script src="assets/js/breakpoints.min.js"></script>
-  <script src="assets/js/util.js"></script>
-  <script src="assets/js/main.js"></script>
+  <footer>
+    2025
+  </footer>
+
 </body>
 </html>
