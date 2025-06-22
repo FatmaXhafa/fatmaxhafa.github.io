@@ -3,135 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Name</title>
-  <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;600&family=Permanent+Marker&family=Poppins:wght@600&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg-color: #6a040f;
-      --text-color: #FCF6F5;
-      --accent-color: #5a020d;
-    }
-
-    body.light {
-      --bg-color: #FCF6F5;
-      --text-color: #6a040f;
-      --accent-color: #ddd;
-    }
-
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Abhaya Libre', serif;
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
-
-    header {
-      padding: 2rem;
-      text-align: center;
-      position: relative;
-    }
-
-    .name {
-      font-family: 'Permanent Marker', cursive;
-      font-size: 3rem;
-      margin: 0;
-    }
-
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin-top: 1rem;
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      font-family: 'Poppins', sans-serif;
-      text-decoration: none;
-      color: var(--text-color);
-      font-size: 1.1rem;
-      transition: color 0.3s ease;
-    }
-
-    nav a:hover {
-      color: #ffffff;
-    }
-
-    main {
-      flex: 1;
-      padding: 2rem;
-      max-width: 800px;
-      margin: 0 auto;
-      font-size: 1.125rem;
-      line-height: 1.8;
-    }
-
-    h1, h2, h3 {
-      font-family: 'Poppins', sans-serif;
-    }
-
-    footer {
-      padding: 1.5rem;
-      text-align: center;
-      font-size: 0.9rem;
-      background-color: var(--accent-color);
-    }
-
-    .contact {
-      margin: 1rem 0;
-    }
-
-    .contact a {
-      color: var(--text-color);
-      text-decoration: none;
-      margin: 0 0.5rem;
-      font-weight: bold;
-    }
-
-    .contact a:hover {
-      text-decoration: underline;
-    }
-
-    .toggle {
-      position: absolute;
-      top: 1.5rem;
-      right: 2rem;
-      font-family: 'Poppins', sans-serif;
-      font-size: 0.9rem;
-      cursor: pointer;
-      padding: 0.3rem 0.6rem;
-      border: 1px solid var(--text-color);
-      background: none;
-      color: var(--text-color);
-      border-radius: 5px;
-      transition: background 0.3s ease, color 0.3s ease;
-    }
-
-    .toggle:hover {
-      background-color: var(--text-color);
-      color: var(--bg-color);
-    }
-
-    @media (max-width: 600px) {
-      .name {
-        font-size: 2.5rem;
-      }
-
-      nav a {
-        font-size: 1rem;
-      }
-
-      .toggle {
-        top: 1rem;
-        right: 1rem;
-      }
-    }
-  </style>
+  <title>Fatma Xhafa - Project & Operations Manager</title>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
   <header>
@@ -141,49 +14,41 @@
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </nav>
-    <button class="toggle" onclick="toggleMode()">Light Mode</button>
   </header>
 
   <main>
     <section id="about">
       <h2>About Me</h2>
       <p>
-        I'm a creative thinker and doer who blends design, strategy, and curiosity. Whether it's launching projects, helping teams collaborate better, or just making fun stuff, I bring passion and personality to every challenge.
+        As a dedicated Project and Operations Manager, I thrive on bringing structure to complex projects and fostering seamless collaboration within teams. My passion lies in transforming ambitious ideas into tangible results, ensuring that every project is delivered on time, within budget, and to the highest standard of quality. I believe in a proactive and people-centric approach to management, focusing on clear communication and strategic problem-solving to navigate any challenge that arises.
       </p>
     </section>
 
     <section id="projects">
       <h2>Projects</h2>
       <p>
-        Here's a glimpse of what I've been working on — from solo experiments to collaborative adventures. More details coming soon!
+        Below are some of the key projects I have managed. Each one represents a unique challenge and a story of successful collaboration and strategic execution. More details and case studies will be available soon.
       </p>
+      <!-- Example Project Placeholders - you can replace these -->
+      <ul>
+        <li><strong>Project Alpha:</strong> Led a cross-functional team to streamline internal reporting processes, resulting in a 20% increase in efficiency.</li>
+        <li><strong>Operations Overhaul:</strong> Restructured the operational workflow for a key department, improving team productivity by 15% and reducing operational costs.</li>
+        <li><strong>Product Launch:</strong> Managed the end-to-end launch of a new software product, coordinating between development, marketing, and sales teams to ensure a successful market entry.</li>
+      </ul>
     </section>
 
     <section id="contact">
       <h2>Contact</h2>
       <div class="contact">
         <a href="mailto:fatmaxhafa@gmail.com">fatmaxhafa@gmail.com</a> |
-        <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/fatmaxhafa" target="_blank">LinkedIn</a>
       </div>
     </section>
   </main>
 
   <footer>
-    © 2025
+    © 2024 Fatma Xhafa
   </footer>
 
-  <script>
-    // Load mode from localStorage
-    const currentMode = localStorage.getItem("mode");
-    if (currentMode === "light") {
-      document.body.classList.add("light");
-    }
-
-    function toggleMode() {
-      document.body.classList.toggle("light");
-      const mode = document.body.classList.contains("light") ? "light" : "dark";
-      localStorage.setItem("mode", mode);
-    }
-  </script>
 </body>
 </html>
