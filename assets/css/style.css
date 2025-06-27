@@ -2,9 +2,9 @@
 
 /* --- Basic Setup --- */
 :root {
-  --bg-color: #f4f1ea; /* A warm, off-white for a vintage paper feel */
-  --text-color: #312f2f; /* A soft black for readability */
-  --accent-color: #d4a373; /* A warm, earthy accent */
+  --bg-color: #fdf2f8; /* Soft light pink background */
+  --text-color: #7f1d1d; /* Deep red-brown text */
+  --accent-color: #dc2626; /* Vibrant red accent */
   --grain-opacity: 0.05; /* How visible the grain effect is */
 }
 
@@ -55,15 +55,12 @@ header {
 
 .name {
   margin-top: 2.5rem;
-}
-
-.name {
-  font-family: 'Helvetica Neue', 'Arial', sans-serif; /* A clean, modern sans-serif for contrast */
-  font-size: 2.5rem;
-  font-weight: 300; /* Lighter weight for a minimal feel */
-  letter-spacing: 2px;
+  font-family: 'Hurricane', cursive;
+  font-size: 100px;
+  font-weight: 400;
+  letter-spacing: 1px;
   margin: 0;
-  text-transform: uppercase;
+  color: var(--text-color);
 }
 
 nav {
@@ -165,9 +162,9 @@ footer {
 /* --- Subheadline --- */
 .subheadline {
   font-size: 1.45rem;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  color: #222;
-  margin: 1.5rem 0 1.0rem 0;
+  font-family: 'Georgia', 'Times New Roman', Times, serif;
+  color: var(--text-color);
+  margin: 1.5rem 0 1.2rem 0;
   font-weight: 400;
   letter-spacing: -0.2px;
   line-height: 1.3;
@@ -220,13 +217,19 @@ footer {
 }
 
 .skills-list li, .cert-list li {
-  background: #f8f6f2;
+  background: var(--bg-color);
   border-left: 4px solid var(--accent-color);
   margin-bottom: 1.2rem;
-  padding: 1rem 1.2rem;
-  border-radius: 6px;
+  padding: 1.2rem 1.5rem;
+  border-radius: 8px;
   font-size: 1.05rem;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+  box-shadow: 0 2px 8px rgba(220, 38, 38, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skills-list li:hover, .cert-list li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.12);
 }
 
 .skills-list li strong {
@@ -235,6 +238,6 @@ footer {
 }
 
 .cert-list li {
-  border-left: 4px solid #b97a56;
+  border-left: 4px solid var(--accent-color);
   font-style: italic;
 } 
