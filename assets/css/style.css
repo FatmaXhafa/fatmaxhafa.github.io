@@ -2,9 +2,9 @@
 
 /* --- Basic Setup --- */
 :root {
-  --bg-color: #fdf2f8; /* Soft light pink background */
+  --bg-color: #faf5ec; /* Off white yellowish background */
   --text-color: #7f1d1d; /* Deep red-brown text */
-  --accent-color: #dc2626; /* Vibrant red accent */
+  --accent-color: #7f1d1d;
   --grain-opacity: 0.05; /* How visible the grain effect is */
 }
 
